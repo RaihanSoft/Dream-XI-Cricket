@@ -1,0 +1,13 @@
+#menu-toggle:checked+label+.mobile-menu {
+    display: block;
+}
+
+.bg{
+    background-image: url(bg-shadow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.primary-color{
+    background-color: #E7FE29;
+}
