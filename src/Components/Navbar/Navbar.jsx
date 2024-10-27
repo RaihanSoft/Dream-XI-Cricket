@@ -1,32 +1,32 @@
 
 import "./Navbar.css"
-const Navbar = () => {
+const Navbar = ({price}) => {
   return (
 
-<section className="shadow-md bg-white border-b sticky top-0 z-50 border-gray-200 ">
-      <nav className="w-11/12 mx-auto">
+    <section className="shadow-md  backdrop-blur-3xl   font-medium  border-b sticky top-0 z-50 border-gray-200 ">
+      <nav className="w-11/12 mx-auto ">
         <div className="container mx-auto flex justify-between items-center px-4 py-3">
-          {/* Logo Section */}
+       
           <div className="flex items-center ">
-            <img src="logo-footer.png" alt="Logo" className="h-10" />
+            <img src="logo-footer.png" alt="Logo" className="h-16" />
           </div>
-  
+
           <div className="hidden md:flex items-center">
-          {/* Links Section */}
-          <div className="hidden md:flex space-x-6 mr-16">
-            <a href="/" className="text-gray-800 hover:text-gray-600">Home</a>
-            <a href="/fixtures" className="text-gray-800 hover:text-gray-600">Fixture</a>
-            <a href="/teams" className="text-gray-800 hover:text-gray-600">Teams</a>
-            <a href="/schedules" className="text-gray-800 hover:text-gray-600">Schedules</a>
-          </div>
-  
-          {/* Coins Section */}
-            <span className="flex items-center text-gray-800">
-              <span>60000 Coin</span>
+      
+            <div className="hidden md:flex space-x-6 mr-16">
+              <a href="/" className="text-gray-800 hover:text-gray-600">Home</a>
+              <a href="/fixtures" className="text-gray-800 hover:text-gray-600">Fixture</a>
+              <a href="/teams" className="text-gray-800 hover:text-gray-600">Teams</a>
+              <a href="/schedules" className="text-gray-800 hover:text-gray-600">Schedules</a>
+            </div>
+
+          
+            <span className="flex items-center text-gray-800 border-2 p-2 rounded-md">
+              <span> {price} Coin</span>
               <img src="https://img.icons8.com/?size=48&id=GlRpln3p4tC0&format=png" alt="Coin Icon" className="ml-2 w-5 h-5" />
             </span>
           </div>
-  
+
           {/* Hamburger Menu */}
           <div className="md:hidden">
             <input type="checkbox" id="menu-toggle" className="hidden" />
@@ -35,7 +35,7 @@ const Navbar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </label>
-            
+
             {/* Mobile Menu */}
             <div className="mobile-menu hidden bg-white absolute top-16 left-0 w-full shadow-lg">
               <ul className="p-4">
@@ -44,17 +44,17 @@ const Navbar = () => {
                 <li className="py-2"><a href="/teams" className="block text-gray-800 hover:text-gray-600">Teams</a></li>
                 <li className="py-2"><a href="/schedules" className="block text-gray-800 hover:text-gray-600">Schedules</a></li>
                 <li className="py-2 flex justify-between">
-                  <span>60000 Coin</span>
+                  <span>{price} Coin</span>
                   <img src="logo-footer.png" alt="Coin Icon" className="ml-2 w-5 h-5" />
                 </li>
               </ul>
             </div>
           </div>
         </div>
-  
-  
+
+
       </nav>
-</section>
+    </section>
   );
 };
 

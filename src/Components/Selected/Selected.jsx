@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 
-const Selected = ({ playerQueue }) => {
+// eslint-disable-next-line react/prop-types
+const Selected = ({ playerQueue, handleDelete, handleIsActiveState, isActive }) => {
 
     return (
         <>
@@ -8,6 +10,7 @@ const Selected = ({ playerQueue }) => {
             </div>
 
             {
+                // eslint-disable-next-line react/prop-types 
                 playerQueue.map((pq, index) => (
                     <div key={index} className="flex items-center justify-between border-2 rounded-xl mt-5 p-3">
 
@@ -22,11 +25,16 @@ const Selected = ({ playerQueue }) => {
                             </div>
                         </div>
 
-                        <div>
+                        <button onClick={() => handleDelete(pq.playerId)}>
                             <img src="https://img.icons8.com/?size=48&id=102550&format=png" alt="" />
-                        </div>
+                        </button>
+
+
 
                     </div>
+
+
+
 
 
 
@@ -34,17 +42,7 @@ const Selected = ({ playerQueue }) => {
             }
 
 
-
-
-
-
-
-
-
-
-
-
-
+            <button onClick={() => handleIsActiveState("Available")} className={`${isActive.Available ? "btn primary-color" : " primary-color btn mt-5"}`} >Add More Player</button>
 
 
 

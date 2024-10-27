@@ -2,8 +2,22 @@ const Footer = () => {
   return (
     <div>
       {/* Footer Section */}
-      <footer className="bg-gray-900 py-10 text-gray-400">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <footer className="bg-gray-900 py-10 text-gray-400 ">
+
+
+                  {/* Logo Section */}
+                  <div className="flex justify-center md:justify-center mt-32">
+            <img
+              src="logo.png"
+              alt="Cricket Logo"
+              className="w-24 mx-auto"
+            />
+          </div>
+
+
+
+
+        <div className="w-11/12  mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Us Section */}
           <div>
             <h3 className="text-lg font-bold text-white mb-4">About Us</h3>
@@ -13,19 +27,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Logo Section */}
-          <div className="flex justify-center md:justify-center">
-            <img
-              src="/path/to/logo.png"
-              alt="Cricket Logo"
-              className="w-24 mx-auto"
-            />
-          </div>
-
-          {/* Quick Links & Subscribe */}
-          <div className="flex flex-col space-y-6">
-            {/* Quick Links */}
-            <div>
+          <div>
               <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
@@ -51,16 +53,25 @@ const Footer = () => {
               </ul>
             </div>
 
+        
+
+
+
+    
+          <div className="flex flex-col space-y-6">
+            {/* Quick Links */}
+
             {/* Subscribe */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-4">Subscribe</h3>
+              <h3 className="text-lg font-bold text-white">Subscribe</h3>
+              <p className="mb-4">Subscribe to our newsletter for the latest updates.</p>
               <form className="flex">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="input input-bordered w-full"
+                  className="input input-bordered w-full -mr-10"
                 />
-                <button className="btn btn-accent ml-2">Subscribe</button>
+                <button className="btn  bg-gradient-to-r from-pink-200 to-yellow-200 -ml-10 ">Subscribe</button>
               </form>
             </div>
           </div>

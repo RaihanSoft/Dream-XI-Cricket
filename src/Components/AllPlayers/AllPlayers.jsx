@@ -4,19 +4,24 @@ import Selected from "../Selected/Selected"
 
 
 // eslint-disable-next-line react/prop-types
-const AllPlayers = ({ handleIsActiveState, isActive , handlePlayer, playerQueue}) => {
+const AllPlayers = ({ handleIsActiveState, isActive, handlePlayer, playerQueue, players, handleDelete }) => {
 
 
     return (
-        <div className="w-11/12 mx-auto">
+        <div className="w-11/12 mx-auto mt-5 font-medium">
 
 
 
-            <div className="gap-6 flex justify-end  mt-5 sticky top-16 z-50">
+            <div className=" flex justify-end  mt-5 sticky top-[90px] z-50">
+                <p className="border-2 rounded-xl">
 
-                <button onClick={() => handleIsActiveState("Available")} className={`${isActive.Available ? "btn primary-color" : "btn"}`} >Available</button>
-                <button onClick={() => handleIsActiveState("Selected")} className={`${isActive.Available ? "btn" : "primary-color btn"}`}>Selected ({playerQueue.length})</button>
+                    <button onClick={() => handleIsActiveState("Available")} className={`${isActive.Available ? " p-3 rounded-l-xl primary-color " : "p-3"}`} >Available</button>
 
+
+
+                    <button onClick={() => handleIsActiveState("Selected")} className={`${isActive.Available ? "p-3" : "primary-color rounded-r-xl p-3"}`}>Selected ({playerQueue.length})</button>
+
+                </p>
             </div>
 
 
@@ -24,7 +29,7 @@ const AllPlayers = ({ handleIsActiveState, isActive , handlePlayer, playerQueue}
             {
 
 
-                isActive.Available ? <Available handlePlayer={handlePlayer} /> : <Selected playerQueue={playerQueue} />
+                isActive.Available ? <Available players={players} handlePlayer={handlePlayer} /> : <Selected handleDelete={handleDelete} playerQueue={playerQueue} handleIsActiveState={handleIsActiveState} isActive={isActive} />
 
 
             }
